@@ -1,0 +1,23 @@
+todo - 
+
+pre-processing
+
+SIMPLE - character stuff
+replace smart quotes
+remove weird/pointless characters
+capitalization: use two captokens :  1) first word.  2) whole word.  make all text lowercase with captokens
+only keep commas and periods and single quotes and doublequotes and parenthesis.
+replace brackets w/ parens 
+put a space before all commas and periods.  later, when generating text, removing all spaces before commas and periods.
+-----> to treat comma and period as a word.  
+
+HARD - part of speech stuff
+i think 'pattern' used to be best way
+tried spaCy but it sucked
+https://www.clips.uantwerpen.be/pages/pattern-en  <-- both parsing and re-forming words
+
+
+
+
+https://stackoverflow.com/questions/47983900/get-fully-formed-word-text-from-word-root-lemma-and-part-of-speech-pos-tag
+
