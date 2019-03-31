@@ -1,0 +1,16 @@
+asdflasj f;wkj ef shiny new stuff asdofiawieuf
+asdflasj f;wkj ef shiny new stuff asdofiawieuf
+asdflasj f;wkj ef shiny new stuff asdofiawieuf
+asdflasj f;wkj ef shiny new stuff asdofiawieuf
+asdflasj f;wkj ef shiny new stuff asdofiawieuf
+asdflasj f;wkj ef shiny new stuff asdofiawieuf
+asdflasj f;wkj ef shiny new stuff asdofiawieuf
+asdflasj f;wkj ef shiny new stuff asdofiawieuf
+“Understanding is the first step to acceptance, and only with acceptance can there be recovery.”
+
+'	Straight single apostrophe	'	'	'
+"	Straight double quote	"	"	"
+‘	Opening single apostrophe	alt+0145	option+]	&lsquo;
+’	Closing single apostrophe	alt+0146	option+shift+]	&rsquo;
+“	Opening double quote	alt+0147	option+[	&ldquo;
+”	Closing double quote

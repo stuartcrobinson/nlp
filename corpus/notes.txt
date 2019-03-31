@@ -11,10 +11,57 @@ replace brackets w/ parens
 put a space before all commas and periods.  later, when generating text, removing all spaces before commas and periods.
 -----> to treat comma and period as a word.  
 
+how to do this?  python best string replace / removal ?
+
+chars to keep:
+. 
+,
+'
+"
+...
+;
+-
+ - 
+
+first, words with internal apostrophes are stored like that.
+an apostrophe is saved as a discreet token only when there is a space before or after it
+
+
+space rules:
+assume everything is followed by a space
+EXCEPTIONS:
+'-' --- remove space before. no space after
+'...' - remove space before. no space after
+'.' --- remove space before.  yes space after
+',' --- remove space before.  yes space after
+
+1.  replace ... with █ $ELLIPSIS$ █ 
+2.  replace █’ █ with █ $CASA$ █   //closing apostrophe space after
+3.  replace █ ‘█ with █ $OASB$ █      //open apostrophe space before
+
+0.  replace ... w ellipsis token 
+1.  replace opening and closing single apostrophes by spaces
+2.  split by non-word character (not a letter or a number) EXCEPT closing apostrophe (only internal apostrophes should remain)
+3.  parse each word.  replace word element with array (concat to orig) of capchar, word root, and parsed tag.
+
+
+note: hyphens don't have space before or after  -   <-- minus sign
+      dashes have space before and after        —   <-- dash
+
+convert "ness" words to adjective form ? (except business)
+
+
+‘	Opening single apostrophe	alt+0145	option+]	&lsquo;
+’	Closing single apostrophe	alt+0146	option+shift+]	&rsquo;
+“	Opening double quote	alt+0147	option+[	&ldquo;
+”	Closing double quote
+
 HARD - part of speech stuff
 i think 'pattern' used to be best way
 tried spaCy but it sucked
 https://www.clips.uantwerpen.be/pages/pattern-en  <-- both parsing and re-forming words
+
+what's best way to do this in python?  python 3 ?
 
 
 
