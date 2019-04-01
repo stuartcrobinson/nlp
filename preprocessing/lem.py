@@ -220,13 +220,14 @@ def parse_custom(word_lower):
     patterns = ['^un', '^dis', '^over', '^under', 'ment$', 'ing$', 'ly$', 'ed$']
 
     for pattern in patterns:
-        if re.match(pattern, word_lower):
-            
+        # print("parse custom:", word_lower, pattern)
+        if re.search(pattern, word_lower):
+            root = re.sub(pattern, '', word_lower)
+            pos = posChar + pattern
+            # print('MATCHED', pattern, root, pos)
+            return word_lower, root, pos
 
-    root = word_lower
-
-    return word_lower, root,
-
+    return word_lower, word_lower, ''
 
 def atomize_word(og_word):
     """wtf is going on here"""

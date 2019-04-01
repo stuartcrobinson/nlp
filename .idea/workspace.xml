@@ -2,17 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b916dbe8-3f18-4551-8cbb-7a8b47df651f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/wordsHp2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/corpus/harry-potter/original/text-processed/1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/corpus/harry-potter/original/text-processed/1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/corpus/harry-potter/original/text-processed/2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/corpus/harry-potter/original/text-processed/2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/corpus/harry-potter/original/text-processed/3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/corpus/harry-potter/original/text-processed/3.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/corpus/harry-potter/original/text-processed/4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/corpus/harry-potter/original/text-processed/4.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/corpus/harry-potter/original/text-processed/5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/corpus/harry-potter/original/text-processed/5.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/corpus/harry-potter/original/text-processed/6.txt" beforeDir="false" afterPath="$PROJECT_DIR$/corpus/harry-potter/original/text-processed/6.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/corpus/harry-potter/original/text-processed/7.txt" beforeDir="false" afterPath="$PROJECT_DIR$/corpus/harry-potter/original/text-processed/7.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/corpus/harry-potter/original/text-unprocessed/1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/corpus/harry-potter/original/text-unprocessed/1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/corpus/notes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/corpus/notes.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/preprocessing/lem.py" beforeDir="false" afterPath="$PROJECT_DIR$/preprocessing/lem.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/preprocessing/lemmatizer-test.py" beforeDir="false" afterPath="$PROJECT_DIR$/preprocessing/lemmatizer-test.py" afterDir="false" />
     </list>
@@ -24,14 +13,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/preprocessing/lem.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="223" column="12" selection-start-line="223" selection-start-column="12" selection-end-line="223" selection-end-column="12" />
+            <state relative-caret-position="419">
+              <caret line="261" column="20" lean-forward="true" selection-start-line="257" selection-start-column="19" selection-end-line="261" selection-end-column="20" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wordsHp2.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="3318" column="8" selection-start-line="3318" selection-start-column="3" selection-end-line="3318" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -48,20 +46,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/preprocessing/lemmatizer-test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="348">
-              <caret line="73" column="10" selection-start-line="73" selection-start-column="10" selection-end-line="73" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wordsHp2.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="2100" column="7" selection-start-line="2100" selection-start-column="4" selection-end-line="2100" selection-end-column="7" />
+            <state relative-caret-position="353">
+              <caret line="52" column="24" lean-forward="true" selection-start-line="52" selection-start-column="24" selection-end-line="52" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -124,16 +113,10 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>&quot;</find>
-      <find>“</find>
-      <find>?</find>
-      <find>!</find>
-      <find>sayingRONAld</find>
       <find>spellbook</find>
       <find>clean(</find>
       <find>tokenize</find>
       <find>,</find>
-      <find>ment</find>
       <find>sporting</find>
       <find>'anti</find>
       <find>'a</find>
@@ -141,7 +124,6 @@
       <find>ation'</find>
       <find>'un</find>
       <find>anti</find>
-      <find>'dis</find>
       <find>ing'</find>
       <find>note</find>
       <find>'over</find>
@@ -153,6 +135,13 @@
       <find>parse</find>
       <find>posChar</find>
       <find>posChar</find>
+      <find>s'</find>
+      <find>ment</find>
+      <find>'dis</find>
+      <find>allow</find>
+      <find>allow'</find>
+      <find>'allow</find>
+      <find>ance'</find>
       <find>atomize</find>
     </findStrings>
     <replaceStrings>
@@ -177,8 +166,8 @@
         <option value="$PROJECT_DIR$/corpus/harry-potter/original/text-unprocessed/1.txt" />
         <option value="$PROJECT_DIR$/wordsHp2.txt" />
         <option value="$PROJECT_DIR$/corpus/notes.txt" />
-        <option value="$PROJECT_DIR$/preprocessing/lemmatizer-test.py" />
         <option value="$PROJECT_DIR$/preprocessing/lem.py" />
+        <option value="$PROJECT_DIR$/preprocessing/lemmatizer-test.py" />
       </list>
     </option>
   </component>
@@ -313,7 +302,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.30235162" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.19820829" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -463,13 +452,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wordsHp2.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="2100" column="7" selection-start-line="2100" selection-start-column="4" selection-end-line="2100" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/corpus/notes.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -477,20 +459,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/preprocessing/lemmatizer-test.py">
+    <entry file="file://$PROJECT_DIR$/wordsHp2.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="73" column="10" selection-start-line="73" selection-start-column="10" selection-end-line="73" selection-end-column="10" />
+        <state relative-caret-position="210">
+          <caret line="3318" column="8" selection-start-line="3318" selection-start-column="3" selection-end-line="3318" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/preprocessing/lem.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="223" column="12" selection-start-line="223" selection-start-column="12" selection-end-line="223" selection-end-column="12" />
+        <state relative-caret-position="419">
+          <caret line="261" column="20" lean-forward="true" selection-start-line="257" selection-start-column="19" selection-end-line="261" selection-end-column="20" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/preprocessing/lemmatizer-test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="52" column="24" lean-forward="true" selection-start-line="52" selection-start-column="24" selection-end-line="52" selection-end-column="24" />
         </state>
       </provider>
     </entry>
