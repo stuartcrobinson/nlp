@@ -85,6 +85,7 @@ m_capChar_i = dict((c, i) for i, c in enumerate(capsCharsList))
 
 
 def getCapsChars(word):
+    """this is confusing cos capitalization count has to skip over caps chars.  is that stupid ?"""
     #     print('  in getCapsChars')
     if word.isupper():
         return [m_i_capChar[0]]
@@ -94,9 +95,11 @@ def getCapsChars(word):
     for i in range(0, wordlen):
         letterIndex = wordlen - 1 - i
         letter = word[letterIndex]
+        print('letter:', letter)
         if letter.isupper():
             try:
                 capsChars = [m_i_capChar[wordlen - i + capsCount]] + capsChars
+                print('capschars:', capsChars)
                 #             print('    capsChars:', capsChars, 'word: ', word)
                 capsCount += 1
             except:
@@ -253,6 +256,8 @@ def atomize_word(og_word):
         word_lower = word.lower() if word_has_caps else word
         if word_has_caps:
             caps_chars = getCapsChars(word)
+            print("caps_chars")
+            print(caps_chars)
         if root == word_lower:
             ''' this means there are no pattern-supplied POS tags we need to keep '''
             # check for custom prefix/postfix
@@ -274,9 +279,30 @@ def atomize_word(og_word):
                         use_parsed = False
                 if use_parsed:
                     m_rootPos_word[key] = word_lower
+                    #uncomment this stuff to allow for 2nd degree parsing!!!!
+                    # word2, root2, pos2 = parse_custom(root)
+                    # if word2 != root2:
+                    #     m_rootPos_word[root2 + pos2] = word2
+                    #     returner += caps_chars + [root2, pos2, pos]
+                    # else:
                     returner += caps_chars + [root, pos]
                 else:
                     returner += caps_chars + [word_lower]
+    # 2nd degree parsing ?  worth it?  deparseable?
+    # if len(returner) > 1:
+    #     word_has_caps = returner[0] in caps_chars
+    #     word = returner[0] if not word_has_caps else returner[1]
+    #     pos_og =''
+    #     for x in returner:
+    #         if '▓' in x:
+    #             pos_og = x
+    #             break
+    #     if re.search('\w+', word):
+    #         word_lower, root, pos = parse_custom(word)
+    #     if word_lower != root:
+    #         if word_has_caps:
+    #             returner = returner[0]
+    print('atomize_word returner:', returner)
     return returner
 
 
@@ -563,32 +589,34 @@ def deparse_text(atoms):
     #     atoms = atoms_[:]
     caps_chars = []
     i = len(atoms)
+    print('here WTFFFFFF')
     while i >= 0:
         i -= 1
         atom = atoms[i]
-        # print("in untokenize: i: " + str(i) + " , atom: " + atom)
-
-        # if atom == 'xxxdq':
-        #     atom = '"'
-        # if atom == 'xxxsq':
-        #     atom = "'"
-        #
-        # atom = \
-        #     "' " if atom == 'xxxasa' else \
-        #     " '" if atom == 'xxxasb' else \
-        #     '" ' if atom == 'xxxdqsa' else \
-        #     ' "' if atom == 'xxxdqsb' else \
-        #     '"' if atom == 'xxxdq' else \
-        #     "'" if atom == 'xxxsq' else \
-        #     '...' if atom == 'xxxellipsis' else atom
+        print("in untokenize: i: " + str(i) + " , atom: " + atom)
         if atom[0] == posChar:
             pos = atom  # [1:]  # remove the leading posChar
             prevAtom = atoms[i - 1]
+            print('atom:', atom, 'prevatom:', prevAtom)
             del atoms[i]
             i -= 1
-            result = m_rootPos_word[prevAtom + pos]
-            if result == None:
-                raise Exception("nonetype found 1, ", prevAtom, pos, result)
+            result = ''
+            if prevAtom[0] == posChar:
+                prevPrevAtom = atoms[i - 1]
+                del atoms[i]
+                i -= 1
+                result1 = m_rootPos_word[prevPrevAtom + prevAtom]
+                if result1 is None:
+                    raise Exception("nonetype found 1, ", prevPrevAtom, prevAtom, result1)
+                print('prevprevatom', prevPrevAtom, 'prevatom', prevAtom, 'result1', result1)
+                result = m_rootPos_word[result1 + pos]
+                if result is None:
+                    raise Exception("nonetype found 1, ", result1, pos, result)
+                print('result', result)
+            else:
+                result = m_rootPos_word[prevAtom + pos]
+                if result is None:
+                    raise Exception("nonetype found 1, ", prevAtom, pos, result)
             atoms[i] = result
             continue
         if atom in capsCharsList:

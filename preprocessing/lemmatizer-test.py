@@ -24,21 +24,21 @@ def test(st):
     print(aIn)
     deparsed = lem.deparse_text(aIn)
     tOut = lem.tokenize(deparsed)
-    # print("deparsed:")
-    # print(deparsed)
-    # print('##############################################################################')
-    # print(tIn)
-    # print('------------------------------------------------------------------------------')
-    # print(tOut)
-    # print('##############################################################################')
-    # print("set_aIn")
-    # print(set_aIn)
+    print("deparsed:")
+    print(deparsed)
+    print('##############################################################################')
+    print(tIn)
+    print('------------------------------------------------------------------------------')
+    print(tOut)
+    print('##############################################################################')
+    print("set_aIn")
+    print(set_aIn)
     result = '✅'
-    for i in range(0, len(tIn)):
-        if tIn[i] != tOut[i]:
-            result = '❌'
-            print("i:", i, "tIn[i]:", tIn[i], "tOut[i]:", tOut[i], "----", lem.getAdverbRoot(tIn[i]),
-                  lem.getAdverb(lem.getAdverbRoot(tIn[i])))
+    # for i in range(0, len(tIn)):
+    #     if tIn[i] != tOut[i]:
+    #         result = '❌'
+    #         print("i:", i, "tIn[i]:", tIn[i], "tOut[i]:", tOut[i], "----", lem.getAdverbRoot(tIn[i]),
+    #               lem.getAdverb(lem.getAdverbRoot(tIn[i])))
     print('---------------------')
     print("set_tInLc length: ", len(set_tInLc))
     print("set_aIn length:    ", len(set_aIn))
@@ -49,9 +49,9 @@ def test(st):
 
 
 # with open("../corpus/aliceInWonderland.txt", "r") as myfile:
-with open("../corpus/harry-potter/original/text-processed/7.txt", "r") as myfile:
-    data = myfile.read()
-    test(data)
+# with open("../corpus/harry-potter/original/text-processed/2.txt", "r") as myfile:
+#     data = myfile.read()
+#     test(data)
 
 # from os import listdir
 # from os.path import isfile, join
@@ -71,7 +71,8 @@ with open("../corpus/harry-potter/original/text-processed/7.txt", "r") as myfile
 # test(text)
 
 # test('"‘How queer ...it seems,’')
-# test('how many training spellbooks wands agreement disregard.')
+# test('how many training spellbooks wands agreement disregard uncertainly uncertain.')
+test("McGonnagal.")
 # test("""‘How queer
 #
 #
@@ -85,3 +86,5 @@ with open("../corpus/harry-potter/original/text-processed/7.txt", "r") as myfile
 
 # TODO - how to clean specific formats ... specific code per each ... not as simple as regex matching line
 # cos sometimes chapter name above or below "CHAPTER X" line
+
+# TODO - start w/ deparse_text capitalization.  not working when first word is McDonalds
