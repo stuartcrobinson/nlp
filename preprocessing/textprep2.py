@@ -284,7 +284,6 @@ def tokenize(text, stupidifyQuotes=True):
     ar = re.split('([^\w\'′]|_| )', text)     
     ar = list(filter(None, ar))
     parsed = []
-    print("ar len: " + str(len(ar)))
     count = -1
     for s in ar:
         count += 1
@@ -405,9 +404,6 @@ m_rootPos_word = {}
 
 def untokenize(atoms):
     ''' have to go backwards from the end to untokenize words before applying correct caps '''
-#     atoms = atoms_[:]
-#     print("in untokenize: atoms: ")
-#     print(atoms)
     capsChars = []
     i = len(atoms)
     while i >= 0:

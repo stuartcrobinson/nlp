@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b916dbe8-3f18-4551-8cbb-7a8b47df651f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/preprocessing/.idea/dictionaries/stuartrobinson.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/preprocessing/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/preprocessing/trash.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/corpus/harry potter/fanfiction/downloads/All Life is Yours to.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/corpus/harry potter/fanfiction/downloads/All Our Secrets Laid.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/corpus/harry potter/fanfiction/downloads/Harry Potter and the.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/corpus/harry potter/fanfiction/downloads/If Thems the Rules.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/corpus/harry potter/fanfiction/downloads/Text Talk.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/corpus/harry potter/fanfiction/downloads/Wear Me Like A Locket.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/corpus/harry potter/fanfiction/downloads/What We Pretend We Cant.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/corpus/harry potter/fanfiction/downloads/Written on the Heart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/corpus/harry potter/fanfiction/downloads/face death in the hope.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/corpus/harry potter/fanfiction/downloads/survival is a talent.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/corpus/harry potter/fanfiction/text/All Life is Yours to.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/corpus/harry potter/fanfiction/text/All Our Secrets Laid.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/corpus/harry potter/fanfiction/text/Harry Potter and the.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/corpus/harry potter/fanfiction/text/If Thems the Rules.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/corpus/harry potter/fanfiction/text/Text Talk.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/corpus/harry potter/fanfiction/text/Wear Me Like A Locket.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/corpus/harry potter/fanfiction/text/What We Pretend We Cant.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/corpus/harry potter/fanfiction/text/Written on the Heart.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/corpus/harry potter/fanfiction/text/face death in the hope.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/corpus/harry potter/fanfiction/text/survival is a talent.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/corpus/harry potter/original/pdf/1 Harry Potter and the Sorcerer's Stone - 1(1).pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/corpus/harry potter/original/pdf/2 Harry Potter and The Chamber of Secrets - 2.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/corpus/harry potter/original/pdf/3 Harry Potter and the Prisoner of Azkaban - 3.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/corpus/harry potter/original/pdf/4 Harry Potter and the Goblet of Fire - 4.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/corpus/harry potter/original/pdf/5 Harry Potter and the Order of the Phoenix - 5.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/corpus/harry potter/original/pdf/6 Harry Potter and the Half-Blood Prince - 6.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/corpus/harry potter/original/pdf/7 Harry Potter and the Deathly Hallows - 7.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/corpus/harry potter/original/pdf/J.K. Rowling - Fantastic Beasts &amp; Where to Find Them.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/corpus/harry potter/original/text unprocessed/1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/corpus/harry potter/original/text unprocessed/2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/corpus/harry potter/original/text unprocessed/3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/corpus/harry potter/original/text unprocessed/4.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/corpus/harry potter/original/text unprocessed/5.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/corpus/harry potter/original/text unprocessed/6.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/corpus/harry potter/original/text unprocessed/7.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/corpus/song of ice and fire/fanfiction/downloads/As High As Honor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/corpus/song of ice and fire/fanfiction/downloads/Freia.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/corpus/song of ice and fire/fanfiction/downloads/Her Life and Her Death.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/corpus/song of ice and fire/fanfiction/downloads/Kingdoms at War.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/corpus/song of ice and fire/fanfiction/downloads/Love On The Brain.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/corpus/song of ice and fire/fanfiction/downloads/Rose Fangs and Wolf.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/corpus/song of ice and fire/fanfiction/downloads/The Covering Sky.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/corpus/song of ice and fire/fanfiction/downloads/Valar Botis All Men Must.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/corpus/song of ice and fire/fanfiction/downloads/Winter Roses Summer.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/corpus/song of ice and fire/fanfiction/downloads/they tumble down.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/corpus/song of ice and fire/fanfiction/search-urls.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/corpus/song of ice and fire/fanfiction/text/As High As Honor.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/corpus/song of ice and fire/fanfiction/text/Freia.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/corpus/song of ice and fire/fanfiction/text/Her Life and Her Death.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/corpus/song of ice and fire/fanfiction/text/Kingdoms at War.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/corpus/song of ice and fire/fanfiction/text/Love On The Brain.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/corpus/song of ice and fire/fanfiction/text/Rose Fangs and Wolf.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/corpus/song of ice and fire/fanfiction/text/The Covering Sky.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/corpus/song of ice and fire/fanfiction/text/Valar Botis All Men Must.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/corpus/song of ice and fire/fanfiction/text/Winter Roses Summer.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/corpus/song of ice and fire/fanfiction/text/they tumble down.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/corpus/song of ice and fire/original/pdf/1. A Game of Thrones.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/corpus/song of ice and fire/original/pdf/2. A Clash of Kings.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/corpus/song of ice and fire/original/pdf/3. A Storm of Swords.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/corpus/song of ice and fire/original/pdf/4. A Feast for Crows.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/corpus/song of ice and fire/original/pdf/5. A Dance With Dragons.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/corpus/song of ice and fire/original/text/1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/corpus/song of ice and fire/original/text/2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/corpus/song of ice and fire/original/text/3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/corpus/song of ice and fire/original/text/4.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/corpus/song of ice and fire/original/text/5.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/preprocessing/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/preprocessing/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/preprocessing/lem.py" beforeDir="false" afterPath="$PROJECT_DIR$/preprocessing/lem.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/preprocessing/lemmatizer-test.py" beforeDir="false" afterPath="$PROJECT_DIR$/preprocessing/lemmatizer-test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/preprocessing/textprep2.py" beforeDir="false" afterPath="$PROJECT_DIR$/preprocessing/textprep2.py" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/preprocessing/lem.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="254">
+              <caret line="300" column="52" selection-start-line="300" selection-start-column="52" selection-end-line="300" selection-end-column="52" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/preprocessing/filescleaner.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/corpus/harry-potter/fanfiction/text-unprocessed/Wear Me Like A Locket.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="251">
+              <caret line="35" column="96" selection-start-line="35" selection-start-column="96" selection-end-line="35" selection-end-column="96" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/corpus/harry-potter/fanfiction/text-processed/Harry Potter and the.txt">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/corpus/harry-potter/original/text-unprocessed/3.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/corpus/harry-potter/fanfiction/text-processed/If Thems the Rules.txt">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/corpus/harry-potter/fanfiction/text-processed/survival is a talent.txt">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/corpus/harry-potter/fanfiction/text-processed/Wear Me Like A Locket.txt">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/corpus/harry-potter/fanfiction/text-processed/What We Pretend We Cant.txt">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/corpus/harry-potter/fanfiction/text-processed/Written on the Heart.txt">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>SotrymeonandIwilltellyou</find>
+      <find>About this Title</find>
+      <find>tokeniz</find>
+      <find>CHAPT</find>
+      <find>CHAPTER</find>
+      <find>Chapter</find>
+      <find>end of the chapter</find>
+      <find>generated</find>
+      <find>generated by</find>
+      <find>Notes</find>
+      <find>.com</find>
+      <find>instag</find>
+      <find>online</find>
+      <find>junk</find>
+      <find>**</find>
+      <find>1.</find>
+      <find>tired</find>
+      <find>phd</find>
+      <find>\d\d\d\d</find>
+      <find>2\d\d\d</find>
+      <find>fiction</find>
+      <find>fan *fic</find>
+      <find>clean(</find>
+    </findStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/corpus/harry-potter/fanfiction/text</dir>
+      <dir>$PROJECT_DIR$/corpus/harry-potter/original/text-unprocessed</dir>
+      <dir>$PROJECT_DIR$/corpus/harry-potter/fanfiction/text-unprocessed</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/corpus/harry-potter/original/text-unprocessed/1.txt" />
+        <option value="$PROJECT_DIR$/corpus/harry-potter/fanfiction/text/Text Talk.txt" />
+        <option value="$PROJECT_DIR$/preprocessing/lemmatizer-test.py" />
+        <option value="$PROJECT_DIR$/preprocessing/splittest.py" />
+        <option value="$PROJECT_DIR$/preprocessing/lem.py" />
+        <option value="$PROJECT_DIR$/preprocessing/filescleaner.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectConfigurationFiles">
+    <option name="files">
+      <list>
+        <option value="$PROJECT_DIR$/.idea/nlp.iml" />
+        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
+        <option value="$PROJECT_DIR$/.idea/misc.xml" />
+        <option value="$PROJECT_DIR$/.idea/modules.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="140" />
+    <option name="y" value="43" />
+    <option name="width" value="1400" />
+    <option name="height" value="987" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="nlp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nlp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nlp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nlp" type="462c0819:PsiDirectoryNode" />
+              <item name="corpus" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nlp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nlp" type="462c0819:PsiDirectoryNode" />
+              <item name="corpus" type="462c0819:PsiDirectoryNode" />
+              <item name="harry-potter" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nlp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nlp" type="462c0819:PsiDirectoryNode" />
+              <item name="corpus" type="462c0819:PsiDirectoryNode" />
+              <item name="harry-potter" type="462c0819:PsiDirectoryNode" />
+              <item name="fanfiction" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nlp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nlp" type="462c0819:PsiDirectoryNode" />
+              <item name="corpus" type="462c0819:PsiDirectoryNode" />
+              <item name="harry-potter" type="462c0819:PsiDirectoryNode" />
+              <item name="fanfiction" type="462c0819:PsiDirectoryNode" />
+              <item name="text-processed" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nlp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nlp" type="462c0819:PsiDirectoryNode" />
+              <item name="corpus" type="462c0819:PsiDirectoryNode" />
+              <item name="harry-potter" type="462c0819:PsiDirectoryNode" />
+              <item name="fanfiction" type="462c0819:PsiDirectoryNode" />
+              <item name="text-unprocessed" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nlp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nlp" type="462c0819:PsiDirectoryNode" />
+              <item name="corpus" type="462c0819:PsiDirectoryNode" />
+              <item name="harry-potter" type="462c0819:PsiDirectoryNode" />
+              <item name="original" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nlp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nlp" type="462c0819:PsiDirectoryNode" />
+              <item name="corpus" type="462c0819:PsiDirectoryNode" />
+              <item name="harry-potter" type="462c0819:PsiDirectoryNode" />
+              <item name="original" type="462c0819:PsiDirectoryNode" />
+              <item name="text-processed" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nlp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nlp" type="462c0819:PsiDirectoryNode" />
+              <item name="corpus" type="462c0819:PsiDirectoryNode" />
+              <item name="harry-potter" type="462c0819:PsiDirectoryNode" />
+              <item name="original" type="462c0819:PsiDirectoryNode" />
+              <item name="text-unprocessed" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nlp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nlp" type="462c0819:PsiDirectoryNode" />
+              <item name="preprocessing" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b916dbe8-3f18-4551-8cbb-7a8b47df651f" name="Default Changelist" comment="" />
+      <created>1554074908216</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1554074908216</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="140" y="43" width="1400" height="987" extended-state="0" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22004357" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32922733" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.32922733" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/corpus/harry-potter/original/text-unprocessed/4.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/corpus/harry-potter/original/text-unprocessed/7.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="454">
+          <caret line="7600" selection-start-line="7600" selection-end-line="7600" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/corpus/harry-potter/original/text-unprocessed/2.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="55712">
+          <caret line="3777" selection-start-line="3777" selection-end-line="3777" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/corpus/harry-potter/fanfiction/text/Written on the Heart.txt" />
+    <entry file="file://$PROJECT_DIR$/corpus/harry-potter/fanfiction/text/Wear Me Like A Locket.txt" />
+    <entry file="file://$PROJECT_DIR$/corpus/harry-potter/fanfiction/text/All Life is Yours to.txt" />
+    <entry file="file://$PROJECT_DIR$/corpus/harry-potter/fanfiction/text/Text Talk.txt" />
+    <entry file="file://$PROJECT_DIR$/corpus/harry-potter/fanfiction/text/All Our Secrets Laid.txt" />
+    <entry file="file://$PROJECT_DIR$/corpus/harry-potter/fanfiction/text/What We Pretend We Cant.txt" />
+    <entry file="file://$PROJECT_DIR$/corpus/harry-potter/fanfiction/text/If Thems the Rules.txt" />
+    <entry file="file://$PROJECT_DIR$/corpus/harry-potter/fanfiction/text/Harry Potter and the.txt" />
+    <entry file="file://$PROJECT_DIR$/corpus/harry-potter/fanfiction/text/face death in the hope.txt" />
+    <entry file="file://$PROJECT_DIR$/corpus/harry-potter/fanfiction/text/survival is a talent.txt" />
+    <entry file="file://$PROJECT_DIR$/corpus/harry-potter/original/text-unprocessed/5.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9780">
+          <caret line="652" column="13" selection-start-line="652" selection-start-column="13" selection-end-line="652" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/preprocessing/lemmatizer-test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="50" selection-start-line="45" selection-end-line="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/corpus/harry-potter/original/text-unprocessed/1.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8186">
+          <caret line="298" selection-start-line="297" selection-end-line="298" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/corpus/harry-potter/original/text-processed/1.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="371" column="72" selection-start-line="371" selection-start-column="69" selection-end-line="371" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/preprocessing/splittest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/corpus/harry-potter/fanfiction/text-processed/All Life is Yours to.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11220">
+          <caret line="748" column="347" lean-forward="true" selection-start-line="748" selection-start-column="347" selection-end-line="748" selection-end-column="347" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/corpus/harry-potter/fanfiction/text-processed/All Our Secrets Laid.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/corpus/harry-potter/fanfiction/text-processed/Harry Potter and the.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/corpus/harry-potter/fanfiction/text-unprocessed/Text Talk.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-11418" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/corpus/harry-potter/fanfiction/text-processed/Text Talk.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-17494" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/corpus/harry-potter/fanfiction/text-processed/If Thems the Rules.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/corpus/harry-potter/fanfiction/text-processed/survival is a talent.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/corpus/harry-potter/fanfiction/text-processed/What We Pretend We Cant.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/corpus/harry-potter/fanfiction/text-processed/Written on the Heart.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/corpus/harry-potter/original/text-unprocessed/3.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/corpus/harry-potter/fanfiction/text-unprocessed/Wear Me Like A Locket.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="35" column="96" selection-start-line="35" selection-start-column="96" selection-end-line="35" selection-end-column="96" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/corpus/harry-potter/fanfiction/text-processed/Wear Me Like A Locket.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/preprocessing/lem.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="300" column="52" selection-start-line="300" selection-start-column="52" selection-end-line="300" selection-end-column="52" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/preprocessing/filescleaner.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
