@@ -208,6 +208,26 @@ duplicateWordForms = []
 # was, were, am, are -- these words get tokenized/untokenized unreliably. :(
 # ?????
 
+def parse_custom(word_lower):
+    # 'un
+    # 'dis
+    # ment'
+    # ing'
+    # 'over
+    # 'under
+    # ly'
+    # ed'
+    patterns = ['^un', '^dis', '^over', '^under', 'ment$', 'ing$', 'ly$', 'ed$']
+
+    for pattern in patterns:
+        if re.match(pattern, word_lower):
+            
+
+    root = word_lower
+
+    return word_lower, root,
+
+
 def atomize_word(og_word):
     """wtf is going on here"""
     global duplicateWordForms
@@ -217,11 +237,12 @@ def atomize_word(og_word):
     returner = []
     if og_word in words_to_ignore:
         return getCapsChars(og_word) + [og_word.lower()]
-    pattern_parsed_list = parse(
-        og_word, relations=True, lemmata=True).split()[0]
+    pattern_parsed_list = parse(og_word, relations=True, lemmata=True).split()[0]
     # print(og_word, pattern_parsed_list)  # keep this
     for patternParsed in pattern_parsed_list:
         word, root, pos = postParse(patternParsed)  # pos starts w/ posChar
+        # print("word, root, pos")
+        # print(word, root, pos)
         if len(pattern_parsed_list) == 1:
             word = og_word  # to keep the spaces attached to single tokens like "' "
         elif "'" in word:
@@ -232,7 +253,12 @@ def atomize_word(og_word):
         if word_has_caps:
             caps_chars = getCapsChars(word)
         if root == word_lower:
-            ''' this means there are no POS tags we need to keep '''
+            ''' this means there are no pattern-supplied POS tags we need to keep '''
+            # check for custom prefix/postfix
+            if len(pattern_parsed_list) == 1:
+                word_lower, root, pos = parse_custom(word_lower)
+        if root == word_lower:
+            ''' now there are def no POS tags we need to keep '''
             returner += caps_chars + [word_lower]
         else:
             if root in roots_to_ignore or "'" in word:
@@ -319,7 +345,13 @@ def removeLinesBefore(lines, param):
 
 def clean(text):
     text = re.sub('\t+', ' ', text).strip()
-    text = re.sub('\n+', '\n', text)
+    text = re.sub('“ ', '“', text)  # “Patil”
+    text = re.sub(' ”', '”', text)
+    text = re.sub(' ,', ',', text)
+    text = re.sub(' \\.', '.', text)
+    text = re.sub(' \\?', '?', text)
+    text = re.sub(' !', '!', text)
+    text = re.sub('\\.\\.\\.', '…', text)
 
     lines = text.split('\n')
 
@@ -338,7 +370,7 @@ def clean(text):
 def tokenize(text):
     text = clean(text)
     """tokenize - break into original-capitalization word or punctuation units list"""
-    text = text.replace('...', '乂xxxellipsisxxx乂') \
+    text = text \
         .replace("' ", '乂xxxasaxxx乂') \
         .replace(" '", '乂xxxasbxxx乂') \
         .replace('" ', '乂xxxdqsaxxx乂') \
@@ -367,7 +399,6 @@ def tokenize(text):
           ' "' if x == 'xxxdqsbxxx' else
           '"' if x == 'xxxdqxxx' else
           "'" if x == 'xxxsqxxx' else
-          '...' if x == 'xxxellipsisxxx' else
           x for x in ar]
     # print(5)
     # print(ar)
@@ -586,8 +617,8 @@ def deparse_text(atoms):
 
         if ("←" in atom_next):
             atoms[i + 1] = atoms[i + 1][1:]
-        elif (not ('"' in atom or "' " == atom or " '" == atom or "'" == atom or "..." in atom or
-                   '"' in atom_next or "' " == atom_next or " '" == atom_next or "'" == atom_next or "..." in atom_next or
+        elif (not ('"' in atom or "' " == atom or " '" == atom or "'" == atom or "…" == atom or
+                   '"' in atom_next or "' " == atom_next or " '" == atom_next or "'" == atom_next or "…" == atom_next or
                    "." in atom_next or "," in atom_next or
                    '?' in atom_next or "!" in atom_next)):
             output += " "
