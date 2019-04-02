@@ -115,9 +115,10 @@ def capitalizeSpecificLetterAtIndex(my_string, n):
 
 
 def capitalizeWord(word, capsChars):
+    print('in capitalizeWord')
+    print("capsChars:", capsChars, "word:", word)
     '''
     salaD
-
 
     for char in capsChar, GOING BACKWARDS - start at end!
 
@@ -138,6 +139,7 @@ def capitalizeWord(word, capsChars):
         word = capitalizeSpecificLetterAtIndex(
             word, m_capChar_i[capsChar] - 1 - count)
         count += 1
+    print("capitalized", word)
     return word
 
 
@@ -622,7 +624,7 @@ def deparse_text(atoms):
         if atom in capsCharsList:
             caps_chars = [atom] + caps_chars
             del atoms[i]
-            while atoms[i - 1] in capsCharsList and i > 1:
+            while atoms[i - 1] in capsCharsList and i >= 1:
                 ''' now build entire caps_chars array - and delete them from atoms as u go'''
                 i -= 1
                 caps_chars = [atoms[i]] + caps_chars

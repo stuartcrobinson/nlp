@@ -72,7 +72,7 @@ def test(st):
 
 # test('"‘How queer ...it seems,’')
 # test('how many training spellbooks wands agreement disregard uncertainly uncertain.')
-test("McGonnagal.")
+test("McGee McDon.")
 # test("""‘How queer
 #
 #
