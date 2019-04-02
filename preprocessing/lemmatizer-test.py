@@ -12,44 +12,51 @@ def test(st):
     tInLc = [x.lower() for x in tIn]
     aIn = lem.atomize(tIn)[:]
 
-    set_tInLc = set(tInLc)
+    set_tInLc = list(set(tInLc))
+    set_tInLc.sort()
     set_aIn = list(set(aIn))
     set_aIn.sort()
 
-    # print("set_tInLc: " + str(set_tInLc))
-    # print("set_aIn: " + str(set_aIn))
-    # print("set_tInLc length: ", len(set_tInLc))
-    # print("set_aIn length:    ", len(set_aIn))
+    # print("set_aIn")
+    # print(set_aIn)
+    print("set_tInLc length: ", len(set_tInLc))
+    print("set_aIn length:    ", len(set_aIn))
+    # print("atomized:")
+
+    #
+    # # print("set_tInLc: " + str(set_tInLc))
+    # # print("set_aIn: " + str(set_aIn))
+    # # print("set_tInLc length: ", len(set_tInLc))
+    # # print("set_aIn length:    ", len(set_aIn))
     print("atomized:")
     print(aIn)
     deparsed = lem.deparse_text(aIn)
     tOut = lem.tokenize(deparsed)
     print("deparsed:")
     print(deparsed)
-    print('##############################################################################')
-    print(tIn)
-    print('------------------------------------------------------------------------------')
-    print(tOut)
-    print('##############################################################################')
-    print("set_aIn")
-    print(set_aIn)
-    result = '✅'
-    # for i in range(0, len(tIn)):
-    #     if tIn[i] != tOut[i]:
-    #         result = '❌'
-    #         print("i:", i, "tIn[i]:", tIn[i], "tOut[i]:", tOut[i], "----", lem.getAdverbRoot(tIn[i]),
-    #               lem.getAdverb(lem.getAdverbRoot(tIn[i])))
-    print('---------------------')
-    print("set_tInLc length: ", len(set_tInLc))
-    print("set_aIn length:    ", len(set_aIn))
-    print('---------------------')
-    print(" tIn len:", len(tIn))
-    print("tOut len:", len(tOut))
-    print(result)
+    # print('##############################################################################')
+    # print(tIn)
+    # print('------------------------------------------------------------------------------')
+    # print(tOut)
+    # print('##############################################################################')
+    # print("set_aIn")
+    # print(set_aIn)
+    # result = '✅'
+    # # for i in range(0, len(tIn)):
+    # #     if tIn[i] != tOut[i]:
+    # #         result = '❌'
+    # #         print("i:", i, "tIn[i]:", tIn[i], "tOut[i]:", tOut[i], "----", lem.getAdverbRoot(tIn[i]))
+    # print('---------------------')
+    # print("set_tInLc length: ", len(set_tInLc))
+    # print("set_aIn length:    ", len(set_aIn))
+    # print('---------------------')
+    # print(" tIn len:", len(tIn))
+    # print("tOut len:", len(tOut))
+    # print(result)
 
 
 # with open("../corpus/aliceInWonderland.txt", "r") as myfile:
-# with open("../corpus/harry-potter/original/text-processed/2.txt", "r") as myfile:
+# with open("../corpus/harry-potter/original/text-processed/1.txt", "r") as myfile:
 #     data = myfile.read()
 #     test(data)
 
@@ -72,7 +79,8 @@ def test(st):
 
 # test('"‘How queer ...it seems,’')
 # test('how many training spellbooks wands agreement disregard uncertainly uncertain.')
-test("McGee McDon.")
+# test("absently absentmindedly atrociously uncautiously wonderfully smittenly cowabuciously widely suddenly.")
+test("uncautiously skipped pebbles.")
 # test("""‘How queer
 #
 #
@@ -88,3 +96,22 @@ test("McGee McDon.")
 # cos sometimes chapter name above or below "CHAPTER X" line
 
 # TODO - start w/ deparse_text capitalization.  not working when first word is McDonalds
+
+# TODO - the parsing and deparsing is terrible.  parsing needs to be like this:
+'''
+get caps chars array
+parse word one way.  get root and pos (ADD THIS TO POS ARRAY)
+word <-- root
+parse word one way.  get root and pos (ADD THIS TO POS ARRAY)
+word <-- root
+parse word one way.  get root and pos (ADD THIS TO POS ARRAY)
+word <-- root
+parse word one way.  get root and pos (ADD THIS TO POS ARRAY)
+
+lots of different ways to parse.  also add beauty/beautiful conversion.  convert adjectives to nouns using a manually generated lookup dictionary.
+
+for DEPARSING:
+
+walking backwards, when you see a pos, keep walking to collect all subsequent pos elements ADD THEM TO A STACK
+pop off top of stack to apply to root.  with loop.  no recursion needed.
+'''

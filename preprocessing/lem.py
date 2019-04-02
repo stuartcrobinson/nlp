@@ -95,11 +95,11 @@ def getCapsChars(word):
     for i in range(0, wordlen):
         letterIndex = wordlen - 1 - i
         letter = word[letterIndex]
-        print('letter:', letter)
+        # print('letter:', letter)
         if letter.isupper():
             try:
                 capsChars = [m_i_capChar[wordlen - i + capsCount]] + capsChars
-                print('capschars:', capsChars)
+                # print('capschars:', capsChars)
                 #             print('    capsChars:', capsChars, 'word: ', word)
                 capsCount += 1
             except:
@@ -115,8 +115,8 @@ def capitalizeSpecificLetterAtIndex(my_string, n):
 
 
 def capitalizeWord(word, capsChars):
-    print('in capitalizeWord')
-    print("capsChars:", capsChars, "word:", word)
+    # print('in capitalizeWord')
+    # print("capsChars:", capsChars, "word:", word)
     '''
     salaD
 
@@ -139,7 +139,7 @@ def capitalizeWord(word, capsChars):
         word = capitalizeSpecificLetterAtIndex(
             word, m_capChar_i[capsChar] - 1 - count)
         count += 1
-    print("capitalized", word)
+    # print("capitalized", word)
     return word
 
 
@@ -187,7 +187,7 @@ def postParse(patternParsed):
         #         print('yes pos in unspported pos set!')
         root = word.lower()
     elif pos == 'RB':
-        root = getAdverbRoot(root)
+        root = getAdverbRootManually(root)
     #
     # superlatives and comparative - get root adjective
     elif pos == 'JJS' or pos == 'JJR' or pos == 'RBR':
@@ -220,9 +220,11 @@ def parse_custom(word_lower):
     # ing'
     # 'over
     # 'under
-    # ly'
     # ed'
-    patterns = ['^un', '^dis', '^over', '^under', 'ment$', 'ing$', 'ly$', 'ed$']
+    patterns = ['^un', '^dis', '^over', '^under', 'ment$',
+                'ing$',
+                'ed$']
+    # 3924
 
     for pattern in patterns:
         # print("parse custom:", word_lower, pattern)
@@ -230,9 +232,12 @@ def parse_custom(word_lower):
             root = re.sub(pattern, '', word_lower)
             pos = posChar + pattern
             # print('MATCHED', pattern, root, pos)
+            # if pattern == 'ing$':
+            #     print(root)
             return word_lower, root, pos
 
     return word_lower, word_lower, ''
+
 
 def atomize_word(og_word):
     """wtf is going on here"""
@@ -258,8 +263,8 @@ def atomize_word(og_word):
         word_lower = word.lower() if word_has_caps else word
         if word_has_caps:
             caps_chars = getCapsChars(word)
-            print("caps_chars")
-            print(caps_chars)
+            # print("caps_chars")
+            # print(caps_chars)
         if root == word_lower:
             ''' this means there are no pattern-supplied POS tags we need to keep '''
             # check for custom prefix/postfix
@@ -281,13 +286,13 @@ def atomize_word(og_word):
                         use_parsed = False
                 if use_parsed:
                     m_rootPos_word[key] = word_lower
-                    #uncomment this stuff to allow for 2nd degree parsing!!!!
-                    # word2, root2, pos2 = parse_custom(root)
-                    # if word2 != root2:
-                    #     m_rootPos_word[root2 + pos2] = word2
-                    #     returner += caps_chars + [root2, pos2, pos]
-                    # else:
-                    returner += caps_chars + [root, pos]
+                    #  stuff to allow for 2nd degree parsing!!!!
+                    word2, root2, pos2 = parse_custom(root)
+                    if word2 != root2:
+                        m_rootPos_word[root2 + pos2] = word2
+                        returner += caps_chars + [root2, pos2, pos]
+                    else:
+                        returner += caps_chars + [root, pos]
                 else:
                     returner += caps_chars + [word_lower]
     # 2nd degree parsing ?  worth it?  deparseable?
@@ -304,7 +309,7 @@ def atomize_word(og_word):
     #     if word_lower != root:
     #         if word_has_caps:
     #             returner = returner[0]
-    print('atomize_word returner:', returner)
+    # print('atomize_word returner:', returner)
     return returner
 
 
@@ -452,38 +457,33 @@ def atomize(tokens):
     return parsed
 
 
-m_adjective_adverb_special = {
-    'futile': 'futilely',
-    'untrue': 'untruly',
-    'true': 'truly',
-    'undue': 'unduly',
-    'wry': 'wryly',
-    'shy': 'shyly',
-    'spacial': 'spatially',
-    'public': 'publicly',
-    'vile': 'vilely',
-    'agile': 'agilely',
-    'coy': 'coyly',
-    'aborad': 'aborally',
-    'pale': 'palely',
-    'whole': 'wholly',
+m_adverb_adjective_special = {
+    'untruly': 'untrue',
+    'truly': 'true',
+    'unduly': 'undue',
+    'spatially': 'spacial',
+    'aborally': 'aborad',
+    'wholly': 'whole',
+    'gently': 'gentle'
 }
 
 
-def getAdverb(word):
-    if word in m_adjective_adverb_special:
-        return m_adjective_adverb_special[word]
-    if word[-1:] == 'y':  # hasty
-        return word[:-1] + 'ily'
-    if word[-2:] == 'le':  # probable responsible subtle
-        return word[:-1] + 'y'
-    if word[-1:] == 'c':  # probable responsible subtle
-        return word + 'ally'
-    if word[-2:] == 'll':  # probable responsible subtle
-        return word + 'y'
-    if word[-2:] == 'll':  # probable responsible subtle
-        return word + 'y'
-    return word + 'ly'
+def getAdverbRootManually(adverb):
+    """returns an adjective"""
+
+    d = {'bly': 'ble',
+         'cally': 'c',
+         'ily': 'y'}
+
+    for key in d:
+        value = d[key]
+        if (adverb.endswith(key)):
+            return re.sub(key + '$', value, adverb)
+    if adverb in m_adverb_adjective_special:
+        return m_adverb_adjective_special[adverb]
+
+    result = re.sub('ly$', '', adverb)
+    return result
 
 
 #
@@ -491,6 +491,7 @@ def getAdverb(word):
 # https://stackoverflow.com/questions/1059559/split-strings-with-multiple-delimiters
 # https://stackoverflow.com/a/16840963/8870055
 # https://stackoverflow.com/questions/17245123/getting-adjective-from-an-adverb-in-nltk-or-other-nlp-library
+# unused right now.  just doing this manually
 def getAdverbRoot(adverb):
     if adverb == 'ceremonially':
         return "ceremonial"
@@ -506,6 +507,8 @@ def getAdverbRoot(adverb):
         return 'uncontrollable'
     if adverb == 'palely':
         return 'pale'
+    # if adverb == 'absentmindedly':
+    #     return 'absentminded'
     winner = ""
     try:
         wordtoinv = adverb
@@ -515,7 +518,8 @@ def getAdverbRoot(adverb):
                 s.append(lemmas)
         for pers in s:
             posword = pers.pertainyms()[0].name()
-            #             print(posword)
+            # print("pers", pers)
+            # print("posword", posword)
             if posword[0:3] == wordtoinv[0:3]:
                 winner = posword
                 break
@@ -561,23 +565,6 @@ wholly wholy ---- whole wholy
 
 '''
 
-m_adjective_adverb_special = {
-    'futile': 'futilely',
-    'untrue': 'untruly',
-    'true': 'truly',
-    'undue': 'unduly',
-    'wry': 'wryly',
-    'shy': 'shyly',
-    'spacial': 'spatially',
-    'public': 'publicly',
-    'vile': 'vilely',
-    'agile': 'agilely',
-    'coy': 'coyly',
-    'aborad': 'aborally',
-    'pale': 'palely',
-    'whole': 'wholly',
-}
-
 m_rootPos_word = {}
 
 
@@ -591,30 +578,43 @@ def deparse_text(atoms):
     #     atoms = atoms_[:]
     caps_chars = []
     i = len(atoms)
-    print('here WTFFFFFF')
+    # print('here WTFFFFFF')
     while i >= 0:
         i -= 1
         atom = atoms[i]
-        print("in untokenize: i: " + str(i) + " , atom: " + atom)
+        print('atom:', atom)
+        # print("in untokenize: i: " + str(i) + " , atom: " + atom)
         if atom[0] == posChar:
             pos = atom  # [1:]  # remove the leading posChar
             prevAtom = atoms[i - 1]
-            print('atom:', atom, 'prevatom:', prevAtom)
             del atoms[i]
             i -= 1
             result = ''
-            if prevAtom[0] == posChar:
+            if len(prevAtom) > 0 and prevAtom[0] == posChar:  # if prevAtom is empty then POS is its own word like ^over
                 prevPrevAtom = atoms[i - 1]
                 del atoms[i]
                 i -= 1
-                result1 = m_rootPos_word[prevPrevAtom + prevAtom]
-                if result1 is None:
-                    raise Exception("nonetype found 1, ", prevPrevAtom, prevAtom, result1)
-                print('prevprevatom', prevPrevAtom, 'prevatom', prevAtom, 'result1', result1)
-                result = m_rootPos_word[result1 + pos]
-                if result is None:
-                    raise Exception("nonetype found 1, ", result1, pos, result)
-                print('result', result)
+                if len(prevPrevAtom) > 0 and prevPrevAtom[0] == posChar:
+                    prevPrevPrevAtom = atoms[i - 1]
+                    del atoms[i]
+                    i -= 1
+
+                    result2 = m_rootPos_word[prevPrevPrevAtom + prevPrevAtom]
+                    if result2 is None:
+                        raise Exception("nonetype found 1, ", prevPrevPrevAtom, prevPrevAtom, result2)
+                    result1 = m_rootPos_word[prevPrevAtom + prevAtom]
+                    if result1 is None:
+                        raise Exception("nonetype found 1, ", prevPrevAtom, prevAtom, result1)
+                    result = m_rootPos_word[result1 + pos]
+                    if result is None:
+                        raise Exception("nonetype found 1, ", result1, pos, result)
+                else:
+                    result1 = m_rootPos_word[prevPrevAtom + prevAtom]
+                    if result1 is None:
+                        raise Exception("nonetype found 1, ", prevPrevAtom, prevAtom, result1)
+                    result = m_rootPos_word[result1 + pos]
+                    if result is None:
+                        raise Exception("nonetype found 1, ", result1, pos, result)
             else:
                 result = m_rootPos_word[prevAtom + pos]
                 if result is None:
@@ -704,8 +704,7 @@ def test(st):
     print('here')
     for i in range(0, len(strSplit)):
         if (strSplit[i] != untSplit[i]):
-            print(strSplit[i], untSplit[i], "----", getAdverbRoot(strSplit[i]),
-                  getAdverb(getAdverbRoot(strSplit[i])))
+            print(strSplit[i], untSplit[i], "----", getAdverbRoot(strSplit[i]))
 
 # # with open ("aliceInWonderland.txt", "r") as myfile:
 # #     data=myfile.read()
